@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+		<title></title>
+		
+		<!-- Kendo UI Mobile styles for all supported platforms -->
+		<link href="assets/css/kendo.mobile.all.min.css" rel="stylesheet">
+		
+
+		<link rel="stylesheet" href="assets/css/master.css">
+
+		<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+
+		<!-- Kendo UI JavaScript -->
+		<script src="assets/js/kendo.all.min.js"></script>
+
+		<script src="assets/js/phonegap.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script-->
+
+	</head>
+	<body>
+	
+	<script>
+	new kendo.mobile.Application(document.body, { transition: "slide" });
+	</script>
+ 		
+ 		<!-- The "layout" defines the common navbar and footer. Views are then swapped
+ 			 out as the content between this common header and footer -->
+
+		<div data-role="layout" data-id="main-layout" id="default">
+			<div data-role="header">
+				<div data-role="navbar">Home</div>
+			</div>
+			
+			<div data-role="footer">
+				<div data-role="navbar">
+				keep calm!...it's just real estate
+				</div>			
+			</div>
+		
+		</div>
+		
+		<div data-role="layout" data-id="second-layout">
+			<div data-role="header">
+				<div data-role="navbar">
+					<span data-role="view-title"></span>
+					<a class="nav-button" data-align="left" data-role="backbutton">back</a>
+					<a href="#home" class="home-button" data-align="right" data-role="button" data-icon="home"></a>
+				</div>
+			</div>
+			
+			<div data-role="footer">
+				<div data-role="navbar">
+				keep calm!...it's just real estate
+				</div>			
+			</div>
+		</div>
+				
+		<div data-role="view" data-show="MYAPP.show" data-layout="main-layout" id="home" data-title="Home">
+			
+
+			<ul data-role="listview" data-style="inset">
+			<li><a href="#ch1"><h3>chapitre 1</h3></a></li>
+			<li><a href="#ch2"><h3>chapitre 2</h3></a></li>
+			<li><a href="#ch3"><h3>chapitre 3</h3></a></li>
+			</ul>
+
+		</div>
+		
+		<div data-role="view" data-layout="second-layout" id="ch1" data-title="Chapitre 1">
+			<p>chapitre 1</p>
+			<ul data-role="listview" data-style="inset">
+			<li><a href="#ch11"><h3>sous chapitre 1</h3></a></li>
+			</ul>
+		</div>
+		<div data-role="view" data-layout="second-layout" id="ch2" data-title="Chapitre 2">
+			<p>chapitre 2</p>
+		</div>	
+		<div data-role="view" data-layout="second-layout" id="ch3" data-title="Chapitre 3">
+			<p>chapitre 3</p>
+		</div>		
+		<div data-role="view" data-layout="second-layout" id="ch11" data-title="sous chapitre 1">
+			<p>sous chapitre 1</p>
+		</div>
+	
+	</body>
+</html>
